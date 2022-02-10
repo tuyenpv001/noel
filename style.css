@@ -1,0 +1,493 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #130f40;
+  overflow: hidden;
+  perspective: 700px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.chung {
+  opacity: 0;
+}
+.d-line {
+  display: inline-block;
+}
+#wp {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  /* background-color: #000; */
+  overflow: hidden;
+}
+.wp-content {
+  perspective: 500px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.text {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.title {
+  opacity: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 10px #fff;
+  animation: traiqua 2s forwards;
+  animation-delay: 20s;
+}
+.chu {
+  opacity: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 25px;
+  margin-top: 1.5rem;
+  text-shadow: 4px 4px 10px #fff;
+  animation: hienchu 2s forwards;
+  animation-delay: 15s;
+}
+@keyframes hienchu {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes traiqua {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#fall {
+  opacity: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  animation: tuyetroi 1s forwards;
+  animation-delay: 8s;
+}
+@keyframes tuyetroi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.snow {
+  position: absolute;
+  opacity: 0;
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%,
+    61% 33%,
+    100% 35%,
+    64% 48%,
+    80% 90%,
+    50% 59%,
+    20% 90%,
+    37% 48%,
+    0% 35%,
+    41% 33%
+  );
+}
+.star:hover {
+  transform: scale(0);
+}
+.moon {
+  position: absolute;
+  transform: scale(0.85);
+  top: 5%;
+  right: 5%;
+  width: 15rem;
+  height: 15rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 12rem #fff;
+  animation: xuong 1s forwards;
+}
+.xetuyet {
+  opacity: 0;
+  position: absolute;
+
+  top: 10%;
+  right: 9%;
+  transform: scale(0.8);
+  animation: quaTrai 3s forwards;
+  animation-delay: 1s;
+}
+.snowers {
+  position: relative;
+
+  bottom: -56%;
+  left: 0%;
+  z-index: 1;
+  width: 35%;
+  height: 30vh;
+  perspective: 500px;
+}
+.snower-0,
+.snower-1,
+.snower-2,
+.snower-3 {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  transition: 2s;
+}
+.snower-0,
+.snower-1,
+.snower-3 {
+  opacity: 0;
+}
+.snower-0 {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 1;
+  animation: sang 1s forwards;
+  animation-delay: 12s;
+}
+.snower-1 {
+  position: absolute;
+  bottom: 0%;
+  left: 6%;
+  z-index: 2;
+  animation: sang1 3s forwards;
+  animation-delay: 13s;
+  transform-origin: 50% 100%;
+}
+@keyframes sang1 {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) scale(0.6);
+  }
+}
+.snower-2 {
+  z-index: 1;
+  position: absolute;
+  bottom: 3%;
+  left: 12%;
+  transform: scale(0);
+  animation: wave 6s infinite cubic-bezier(0.28, -1.02, 0.88, 2.26);
+  animation-delay: 10s;
+}
+.snower-3 {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: 4;
+  transform: scale(0.7);
+  animation: zoomIn 2s forwards;
+  animation-delay: 11s;
+}
+
+.tree {
+  opacity: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 24%;
+
+  width: 300px;
+  height: 400px;
+  z-index: 2;
+  animation: len 2s forwards;
+  animation-delay: 4s;
+}
+#circle {
+  position: absolute;
+  bottom: 2%;
+  left: 24%;
+
+  width: 300px;
+  height: 400px;
+  z-index: 3;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.den {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  /* animation: sang 1s infinite cubic-bezier(0.65, -1.54, 0.51, 2.57); */
+  animation-name: sang;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.65, -1.54, 0.51, 2.57);
+  display: inline-block;
+  opacity: 0;
+  box-shadow: 0 0 1rem #fff;
+}
+
+.house {
+  opacity: 0;
+  position: absolute;
+  bottom: 6%;
+  z-index: 1;
+  left: 35%;
+  width: 250px;
+  height: 250px;
+  animation: zoom 2s forwards;
+  animation-delay: 5s;
+}
+.tubehouse {
+  opacity: 0;
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+  bottom: 0%;
+  left: 58%;
+  z-index: 3;
+  transform: rotateY(180deg);
+  animation: zoomOut 1s forwards;
+  animation-delay: 5s;
+}
+.dog {
+  opacity: 0;
+
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  bottom: -2%;
+  left: 57%;
+  z-index: 3;
+  animation: quaTrai 3s forwards;
+  animation-delay: 8s;
+}
+.santa {
+  opacity: 0;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: 0%;
+  left: 70%;
+  z-index: 1;
+  animation: dap 1s forwards;
+  transform-origin: 50% 100%;
+  animation-delay: 7s;
+}
+.gift {
+  opacity: 0;
+  position: absolute;
+  bottom: 4%;
+  right: 6%;
+  height: 100px;
+  width: 150px;
+  z-index: 1;
+  animation: zoom 1s forwards;
+  animation-delay: 7s;
+}
+
+.bg {
+  position: absolute;
+  bottom: -4%;
+  left: 0%;
+  width: 100%;
+  height: 23vh;
+  background-color: #fff;
+  transform: rotateX(45deg);
+  box-shadow: 0 -10px 200px #fff;
+}
+/*  Animation */
+@keyframes sang {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(20px, 2000px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveCross {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(1000px, 2000px);
+    opacity: 1;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(1000px, 2000px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(2000px);
+    opacity: 1;
+  }
+}
+@keyframes light {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.6);
+    transform: rotate(-6deg);
+  }
+  25% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes xuong {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes quaTrai {
+  0% {
+    transform: translate(300px, -10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-10%, 10%) rotate(-8deg);
+    opacity: 1;
+  }
+}
+@keyframes len {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+  }
+}
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: translateZ(200px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateZ(0);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateY(180deg);
+  }
+}
+
+@keyframes dap {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(30deg);
+  }
+  100% {
+    transform: translateX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateZ(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+}
